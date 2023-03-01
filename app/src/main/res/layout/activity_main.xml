@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonRed"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="75dp"
+        android:clickable="false"
+        android:background="@drawable/red_button_circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonYellow"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="30dp"
+        android:clickable="false"
+        android:background="@drawable/yellow_button_circle"
+        app:layout_constraintEnd_toEndOf="@+id/buttonRed"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRed" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonGreen"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/green_button_circle"
+        android:clickable="false"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="@+id/buttonYellow"
+        app:layout_constraintTop_toBottomOf="@+id/buttonYellow" />
+
+    <TextView
+        android:id="@+id/textTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="36sp"
+        android:textColor="@color/grey"
+        android:text="@string/zero"
+        app:layout_constraintBottom_toTopOf="@+id/buttonRed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="-20dp"
+        android:onClick="startStop"
+        android:text="@string/start"
+        app:layout_constraintEnd_toStartOf="@+id/buttonGreen"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGreen" />
+
+    <Button
+        android:id="@+id/buttonPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-20dp"
+        android:text="@string/pause"
+        android:onClick="pauseUnpause"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonStart"
+        app:layout_constraintStart_toEndOf="@+id/buttonGreen" />
+
+    <EditText
+        android:id="@+id/editTimer"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:hint="2000"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:ems="6"
+        android:text="Change time between signals (in ms):"
+        android:textSize="13.3sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGreen" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch1"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:rotation="90"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonYellow"
+        app:layout_constraintEnd_toStartOf="@+id/buttonYellow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonYellow" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

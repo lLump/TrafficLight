@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Traffic Light</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="zero">0</string>
+    <string name="pause">Pause</string>
+    <string name="unpause">Unpause</string>
+</resources>
